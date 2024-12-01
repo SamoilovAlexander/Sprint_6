@@ -20,7 +20,6 @@ class NewOrder(BasePage):
         self.add_text_to_element(OrderFormLocators.FIELD_PHONE, phone)
         self.click_to_element(OrderFormLocators.BUTTON_NEXT)
         self.click_to_element(AboutRentLocators.FIELD_DATE_OF_BEGINING)
-        self.click_to_element(AboutRentLocators.NEW_MONTH)
         self.click_to_element(AboutRentLocators.EXACT_DATE)
         self.click_to_element(AboutRentLocators.FIELD_RENT_PERIOD)
         self.click_to_element(AboutRentLocators.EXACT_RENT_PERIOD)

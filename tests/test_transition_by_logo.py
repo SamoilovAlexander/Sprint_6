@@ -1,8 +1,6 @@
-from selenium.webdriver.support.wait import WebDriverWait
-
 from data import Url
-from locators.main_page_locators import HeadersButton
 from page_objects.transition_by_logo import Headers
+from tests.conftest import driver
 
 
 class TestTransitionByLogo:
@@ -16,7 +14,8 @@ class TestTransitionByLogo:
     def test_transition_by_logo_yandex(self, driver):
         click_yandex = Headers(driver)
         click_yandex.click_logo_yandex()
-
         click_yandex.switch_to_new_window()
-        new_url = click_yandex.get_url()
+
+        driver.implicitly_wait(5)
+        new_url = driver.current_url
         assert Url.URL_DZEN in new_url

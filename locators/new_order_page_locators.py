@@ -2,25 +2,28 @@ from selenium.webdriver.common.by import By
 
 
 class OrderFormLocators:
-    FIELD_NAME = By.XPATH, '//html/body/div/div/div[2]/div[2]/div[1]/input'
-    FIELD_SURNAME = By.XPATH, '//div[2]/div[2]/div[2]/input'
-    FIELD_ADDRESS = By.XPATH, '//div[2]/div[2]/div[3]/input'
+    FIELD_NAME = By.XPATH, './/input[@placeholder="* Имя"]'
+    FIELD_SURNAME = By.XPATH, '//input[@placeholder="* Фамилия"]'
+    FIELD_ADDRESS = By.XPATH, '//input[@placeholder="* Адрес: куда привезти заказ"]'
     FIELD_METRO_STATION = By.XPATH, "//input[@placeholder='* Станция метро']"
     EXACT_METRO_STATION = By.XPATH, "//*[text()='Бульвар Рокоссовского']"
-    FIELD_PHONE = By.XPATH, '//div[2]/div[2]/div[5]/input'
-    BUTTON_NEXT = By.XPATH, './/div[2]/div[3]/button'
+    FIELD_PHONE = By.XPATH, '//input[@placeholder="* Телефон: на него позвонит курьер"]'
+    BUTTON_NEXT = By.XPATH, './/button[@class="Button_Button__ra12g Button_Middle__1CSJM"]'
 
 class AboutRentLocators:
-    EXACT_RENT_PERIOD = By.XPATH, './/div[2]/div[2]/div[2]/div[2]/div[3]'
-    NEW_MONTH = By.XPATH, '//html/body/div/div/div[2]/div[2]/div[1]/div[2]/div[2]/div/div/button[2]'
-    EXACT_DATE = By.XPATH, '//html/body/div/div/div[2]/div[2]/div[1]/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div[1]'
-    FIELD_DATE_OF_BEGINING = By.XPATH, '//div/div/div[2]/div[2]/div[1]'
-    FIELD_RENT_PERIOD = By.XPATH, './/div/div[2]/div[2]/div[2]'
-    SUBFIELD_RENT_PERIOD = By.XPATH, '//div/div/div[2]/div[2]/div[2]/div[2]'
-    FIELD_COLOUR_OF_SCOOTER = By.XPATH, '//div/div/div[2]/div[2]/div[3]/label[1]'
-    FIELD_COMMENT = By.XPATH, '//div/div/div[2]/div[2]/div[4]/input'
-    BUTTON_TO_FINISH_ORDER_UPPER = By.XPATH, './/div/div/div[1]/div[2]/button[1]'
-    BUTTON_TO_FINISH_ORDER_LOWER = By.XPATH, './/div/div/div[2]/div[3]/button[2]'
-    BUTTON_OF_CONFIRM_ORDER = By.XPATH, './/div/div/div[2]/div[5]/div[2]/button[2]'
-    TEXT_CONFIRMATION_OF_ORDER = By.XPATH, '//div/div/div[2]/div[5]/div[1]'
-    WATCH_STATUS = By.XPATH, '//div/div/div[2]/div[5]/div[2]/button'
+    FIELD_DATE_OF_BEGINING = By.XPATH, './/input[@placeholder="* Когда привезти самокат"]'
+    NEW_MONTH = By.XPATH, './/*[@class="react-datepicker__navigation react-datepicker__navigation--next"]'
+    EXACT_DATE = By.XPATH, './/*[@class="react-datepicker__day react-datepicker__day--012"]'
+
+
+    FIELD_RENT_PERIOD = By.XPATH, './/*[@class="Dropdown-placeholder"]'
+    EXACT_RENT_PERIOD = By.XPATH, './/*[contains(text(), "четверо суток")]'
+
+
+    FIELD_COLOUR_OF_SCOOTER = By.XPATH, './/*[contains(@id, "black")]'
+    FIELD_COMMENT = By.XPATH, '//input[@placeholder="Комментарий для курьера"]'
+    BUTTON_TO_FINISH_ORDER_UPPER = By.XPATH, './/button[@class="Button_Button__ra12g"]'
+    BUTTON_TO_FINISH_ORDER_LOWER = By.XPATH, './/button[@class="Button_Button__ra12g Button_Middle__1CSJM"]'
+    BUTTON_OF_CONFIRM_ORDER = By.XPATH, './/button[contains(text(), "Да")]'
+    TEXT_CONFIRMATION_OF_ORDER = By.XPATH, './/*[contains(text(), "Заказ оформлен")]'
+    WATCH_STATUS = By.XPATH, '//*button[contains(text(), "Посмотреть статус")]'

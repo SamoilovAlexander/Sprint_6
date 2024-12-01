@@ -9,13 +9,13 @@ class FAQLocators: #общие локаторы вопросов и ответо
     SCROLL_TO_THE_LAST_QUESTION = By.XPATH, '//*[@id="accordion__heading-7"]'
 
 class NewOrderLocators:
-    BUTTON_TO_START_ORDER_UPPER = By.XPATH, '//div/div/div/div[1]/div[2]/button[1]'
-    BUTTON_TO_START_ORDER_LOWER = By.XPATH, '//div/div/div/div[4]/div[2]/div[5]/button'
+    BUTTON_TO_START_ORDER_UPPER = By.XPATH, './/button[@class="Button_Button__ra12g"]'
+    BUTTON_TO_START_ORDER_LOWER = By.XPATH, '//button[@class="Button_Button__ra12g Button_Middle__1CSJM"]'
 
 class HeadersButton:
-    LOGO_SCOOTER = By.XPATH, './/a[2]/img'
-    LOGO_YANDEX = By.XPATH, './/a[1]/img'
-    SCOOTER_SLOGAN = By.XPATH, '//div/div/div/div[2]/div[4]/div[1]'
-    YANDEX_SEARCH = By.XPATH, './/body/form/button[@text="Найти"]'
-    DZEN_MAIN = By.XPATH, './/div[13]/div/div[2]/div[1]/aside/ul/a[1]/li/div/div[1]/svg'
+    LOGO_SCOOTER = By.XPATH, '//*[@class="Header_LogoScooter__3lsAR"]'
+    LOGO_YANDEX = By.XPATH, '//*[@class="Header_LogoYandex__3TSOI"]'
+    SCOOTER_SLOGAN = By.XPATH, '//*[@class="Home_SubHeader__zwi_E"]'
+    YANDEX_SEARCH = By.XPATH, './/button[@text="Найти"]'
+    DZEN_MAIN = By.XPATH, '//[@class="dzen-layout--navigation-tab__text-2g"]'
     HEADER_DZEN = By.ID, "dzen-header"
